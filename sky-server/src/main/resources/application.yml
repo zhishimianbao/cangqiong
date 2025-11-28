@@ -48,7 +48,8 @@ sky:
       appid: ${sky.wechat.appid}
       secret: ${sky.wechat.secret}
   file:
-    upload-dir: C:/Users/16775/Desktop/CangQiong/sky-take-out/sky-server/src/main/resources/uploads
+#    upload-dir: C:/Users/16775/Desktop/CangQiong/sky-take-out/sky-server/src/main/resources/uploads
+    upload-dir: F:/PROJECT/CangQiong/sky-take-out/sky-server/src/main/resources/uploads
     access-url: http://localhost:8080/uploads
   wechat:
     appid: ${sky.wechat.appid}
