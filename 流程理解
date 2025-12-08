@@ -1,0 +1,8 @@
+前端给controller层发json，controller层把json封装为DTO发给Service，
+其实Service接口啥没有，只有一个调用方法，就完全控制着Impl。impl处理前端或后端传过来的数据。
+处理完具体业务，Service拿走处理完的成果交给controller层或者mapper层。
+mapper层包括mapper接口和mapper.xml。Mapper 接口定义 “要执行增删改查什么操作”，Mapper.xml 定义具体 执行的SQL。
+mapper层返回给Service层的是entity实体类。
+Service层处理完业务返回给controller层，controller层返回给前端有两种，
+一个是返回VO对象数据return Result.success(orderPaymentVO);
+一种是直接返回return Result.success();
