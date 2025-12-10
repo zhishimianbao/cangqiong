@@ -67,4 +67,22 @@ public interface OrderMapper {
     @Select("select * from orders where number = #{orderNumber} and user_id= #{userId}")
     Orders getByNumberAndUserId(String orderNumber, Long userId);
 
+    /**
+     * 根据动态条件统计营业额
+     * @param map
+     */
+    Double sumByMap(Map map);
+
+    /**
+     *根据动态条件统计订单数量
+     * @param map
+     */
+    Integer countByMap(Map map);
+
+    /**
+     * 查询商品销量排名
+     * @param begin
+     * @param end
+     */
+    List<GoodsSalesDTO> getSalesTop10(LocalDateTime begin, LocalDateTime end);
 }
